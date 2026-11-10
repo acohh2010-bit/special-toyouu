@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Sweet Seventeen 💙</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* PENGATURAN SEMUA HALAMAN */
+
+.page {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  min-height: 100svh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: clamp(15px, 4vw, 25px);
+  animation: fade 0.8s ease;
+  -webkit-overflow-scrolling: touch;
+}
+
+.page.active {
+  display: flex;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: clamp(30px, 8vw, 65px);
+  color: #397da9;
+  margin-bottom: 15px;
+  overflow-wrap: break-word;
+}
+
+p {
+  color: #527b99;
+  line-height: 1.8;
+  font-size: clamp(14px, 3.5vw, 16px);
+  overflow-wrap: break-word;
+}
+
+button {
+  border: none;
+  padding: 13px 28px;
+  min-height: 44px;
+  border-radius: 30px;
+  background: #70b8e6;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px #70b8e655;
+  max-width: 100%;
+}
+
+button:hover {
+  transform: scale(1.08);
+  background: #398fca;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  max-width: 700px;
+  width: 100%;
+  flex-shrink: 0;
+  margin: auto;
+}
+
+.subtitle {
+  letter-spacing: clamp(1px, 1vw, 4px);
+  color: #639ec5;
+  font-size: clamp(10px, 2.8vw, 13px);
+  margin-bottom: 20px;
+}
+
+/* HALAMAN 1 */
+
+#page1 {
+  background: linear-gradient(
+    135deg,
+    #dff4ff,
+    #91d3ff,
+    #f0faff
+  );
+}
+
+.white-heart {
+  position: absolute;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+  text-shadow:
+    0 0 5px #268bc9,
+    0 0 13px #168bd2,
+    0 0 22px #ffffff;
+  -webkit-text-stroke: 1px #5ab5ed;
+  animation: floatUp 7s linear infinite;
+  opacity: 1;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* HALAMAN 2 */
+
+#page2 {
+  background: linear-gradient(
+    135deg,
+    #d8f0ff,
+    #a9dcff,
+    #f2faff
+  );
+  flex-direction: column;
+}
+
+#page2::before {
+  content: "🎂 🧁 🎀 🍰 🎂 🧁 🎀 🍰";
+  position: absolute;
+  inset: 0;
+  font-size: 45px;
+  line-height: 2.5;
+  letter-spacing: 15px;
+  opacity: 0.18;
+  overflow: hidden;
+  word-break: break-all;
+  pointer-events: none;
+}
+
+/* KUE TERBANG */
+
+.flying-cake {
+  position: absolute;
+  z-index: 1;
+  left: var(--cake-left);
+  bottom: -90px;
+  font-size: var(--cake-size);
+  opacity: 0.78;
+  pointer-events: none;
+  animation: cakeFloat var(--cake-duration) linear infinite;
+  animation-delay: var(--cake-delay);
+  filter: drop-shadow(0 5px 7px #4b9ac733);
+}
+
+@keyframes cakeFloat {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-12deg);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.82;
+  }
+
+  50% {
+    transform: translate3d(35px, -55vh, 0) rotate(12deg);
+  }
+
+  88% {
+    opacity: 0.82;
+  }
+
+  100% {
+    transform: translate3d(-20px, -115vh, 0) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* KOTAK UCAPAN */
+
+.wish-box {
+  background: #fafdffed;
+  padding: clamp(18px, 4vw, 25px);
+  border-radius: 25px;
+  max-width: 550px;
+  width: 100%;
+  margin: 15px auto;
+  box-shadow: 0 8px 25px #72b6e533;
+  overflow-wrap: break-word;
+}
+
+.wish-box h2 {
+  color: #438bb8;
+  margin-bottom: 12px;
+  font-size: clamp(18px, 4vw, 24px);
+}
+
+/* HALAMAN 3 */
+
+#page3 {
+  background:
+    linear-gradient(#0004,#0004),
+    url('https://picsum.photos/seed/birthdaybackground/1200/900')
+    center/cover;
+  flex-direction: column;
+}
+
+#page3 h1 {
+  color: white;
+  font-size: clamp(28px, 6vw, 40px);
+  text-shadow: 2px 3px 10px #0008;
+}
+
+#page3 p {
+  color: white;
+}
+
+/* GALERI FOTO */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 150px));
+  gap: clamp(12px, 4vw, 20px);
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 340px;
+}
+
+.polaroid {
+  background: #fafdff;
+  padding: 9px 9px 25px;
+  box-shadow: 0 7px 20px #0005;
+  transform: rotate(-5deg);
+  transition: 0.4s;
+  min-width: 0;
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(5deg);
+}
+
+.polaroid:nth-child(3) {
+  transform: rotate(4deg);
+}
+
+.polaroid:nth-child(4) {
+  transform: rotate(-5deg);
+}
+
+.polaroid:hover {
+  transform: rotate(0) scale(1.05);
+  z-index: 10;
+}
+
+.polaroid img {
+  width: 100%;
+  height: clamp(90px, 30vw, 125px);
+  object-fit: cover;
+}
+
+.polaroid span {
+  display: block;
+  color: #528bb4;
+  font-size: clamp(10px, 2.8vw, 12px);
+  margin-top: 8px;
+  overflow-wrap: break-word;
+}
+
+/* HALAMAN 4 */
+
+#page4 {
+  background: linear-gradient(
+    135deg,
+    #d5efff,
+    #78bce8,
+    #e7f6ff
+  );
+}
+
+.red-heart {
+  position: absolute;
+  font-size: 30px;
+  animation: floatUp 6s linear infinite;
+  pointer-events: none;
+  filter: hue-rotate(170deg);
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 768px) {
+
+  .page {
+    padding: 25px 18px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .wish-box {
+    max-width: 100%;
+  }
+
+  #page2 h1 {
+    font-size: clamp(27px, 6vw, 40px) !important;
+  }
+
+  #page3 h1 {
+    font-size: clamp(28px, 6vw, 38px);
+  }
+
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 450px) {
+
+  .page {
+    padding: 20px 14px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .subtitle {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  button {
+    padding: 12px 22px;
+    font-size: 14px;
+    margin: 7px 4px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 125px));
+    gap: 15px;
+    max-width: 265px;
+  }
+
+  .polaroid {
+    padding: 7px 7px 20px;
+  }
+
+  .polaroid img {
+    height: 110px;
+  }
+
+  .wish-box {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .wish-box h2 {
+    font-size: 19px;
+  }
+
+  #page2 h1 {
+    font-size: 30px !important;
+  }
+
+  #page3 h1 {
+    font-size: 30px;
+  }
+
+  #page3 .content {
+    width: 100%;
+  }
+
+}
+
+/* HP LAYAR KECIL */
+
+@media (max-width: 350px) {
+
+  .page {
+    padding: 15px 10px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 115px));
+    gap: 12px;
+  }
+
+  .wish-box {
+    padding: 14px;
+  }
+
+  button {
+    font-size: 13px;
+    padding: 11px 17px;
+  }
+
+  #page2 h1 {
+    font-size: 26px !important;
+  }
+
+}
+
+/* MENGHORMATI PENGATURAN REDUCE MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .page,
+  .white-heart,
+  .red-heart,
+  .flying-cake {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+
+  button,
+  .polaroid {
+    transition: none;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HALAMAN 1: OPENING -->
+
+<section class="page active" id="page1">
+
+  <div id="whiteHearts"></div>
+
+  <div class="content">
+
+    <div class="subtitle">
+      Syyuuut... SOMETHING SPECIAL IS WAITING
+    </div>
+
+    <h1>
+      A Little Surprise<br>
+      Just for You ♡
+    </h1>
+
+    <p>
+      Hari ini ada sesuatu yang spesial buat kamu... ✨<br>
+      Tapi, semuanya masih jadi rahasia.
+    </p>
+
+    <br>
+
+    <p>Are you ready to reveal your surprise?</p>
+
+    <button onclick="goToPage(2)">
+      Open Your Surprise 💌
+    </button>
+
+  </div>
+</section>
+
+
+<!-- HALAMAN 2: WISHES -->
+
+<section class="page" id="page2">
+
+  <div id="flyingCakes"></div>
+
+  <div class="content">
+
+    <!-- SECTION 1 -->
+
+    <div id="section1">
+
+      <div style="font-size:55px">🎂🎀</div>
+
+      <h1 style="font-size:40px">
+        Happy Sweet Seventeen! ♡
+      </h1>
+
+      <div class="wish-box">
+
+        <h2>Dear Birthday my boyy 💙</h2>
+
+        <p>
+          Happy Sweet Seventeen
+          to the special person in my life!
+          yeaayyy🥳🥳
+          to my boyy,terimakasih karna sudah menjadi bagian dari kisah cerita hidupku,terimakasih udah mau berusaha 
+          buat aku tetep tersenyum dengan caramu,terimaksih buat semangat yang kamu kasih ke aku,
+          terimaksih udah mau dengerin ocehan aku yang panjang nya kali lebar kali tinggi,terimakasih udah sabar
+          ngadepin aku yang kadang hari harinya random gajelas banget,terimakasih buat kamu yang selalu berusaha 
+          pahamin kondisi aku,dan terakhir mungkin seterusnya atau bahkan kedepan nya, aku mau bilang terimakasih
+          udah mau masukin aku kedalam skenario hidupmu
+          <br>
+          Tetep semangat yaaa ganteng💙,semangat belajarnyaa,semangat ngafalnyaa,semangat buat ujian nyaa,pokoknya harus 
+          fokuss,jangan mikirin yang laennn
+        </p>
+
+      </div>
+
+      <button onclick="showSection(2)">
+        Next Wishes ♡
+      </button>
+
+    </div>
+
+
+    <!-- SECTION 2 -->
+
+    <div id="section2" style="display:none">
+
+      <div style="font-size:55px">🧁💐</div>
+
+      <h1 style="font-size:38px">
+        My Little Wishes
+      </h1>
+
+      <div class="wish-box">
+
+        <h2>For Your New Chapter ✨</h2>
+
+        <p>
+         udah makin tua,makin gede,makin berkurang umurnya,berarti pikiran nya juga harus lebih dewasa lagi,
+         umurnya emang berkurang tapii..,semoga pemikiran nyaa,pemahaman nyaa,dan pengetahuan nyaa bertambahh
+        
+          inget boyy,ajal gak ada yang tau dateng nya kapan,jadi.. jangan seneng kalo umurnya berkurang,
+          intropeksi diri lagi..tahun lalu udahh bener belomm?,amalnya udah banyak belom?. 
+          kao belom berarti sekarang harus diperbaiki lagi..,kalo amalnya belom banyak diperbanyak lagi,yang 
+          rajin lagi shalatnyaaa,di khusyuin lagii,dzikir pagi petang nyaa jangan di lupain ,banyak banyak istighfar.
+          <br><br>
+         jangan suka insecure ya gantengkuuu❤️,cukup jadi versi diri kamu sendiri tanpa harus jadi versi orang lupain
+         sehat sehat ya gantengkuuu❤️
+         <br>
+         owhh yaa terakhir,ini paling penting
+         tolong bilangin mama kamu makasih udah melahirkan sosok bayi laki laki yang kecil dan sehat,
+         kini telah tumbuh menjadi remaja menuju dewasa
+
+
+          May your 17th year be filled with
+          endless happiness and beautiful memories!
+        </p>
+
+      </div>
+
+      <button onclick="showSection(1)">
+        Previous ♡
+      </button>
+
+      <button onclick="goToPage(3)">
+        Next Page →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HALAMAN 3: POLAROID -->
+
+<section class="page" id="page3">
+
+  <div class="content">
+
+    <h1>Our Little Memories ♡</h1>
+
+    <p>
+      Every picture tells a beautiful story 📸
+    </p>
+
+    <div class="gallery">
+
+      <div class="polaroid">
+        <img src="me1.jpg">
+        <span>❤️</span>
+      </div>
+
+      <div class="polaroid">
+        <img src="me2.jpg">
+        <span>🤍</span>
+      </div>
+
+      <div class="polaroid">
+        <img src="me3.jpg">
+        <span>🩷</span>
+      </div>
+
+      <div class="polaroid">
+        <img src="me4.jpg">
+        <span>💕</span>
+      </div>
+
+    </div>
+
+    <button onclick="goToPage(2)">
+      ← Back
+    </button>
+
+    <button onclick="goToPage(4)">
+      Last Surprise 💙
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- HALAMAN 4: CLOSING -->
+
+<section class="page" id="page4">
+
+  <div id="redHearts"></div>
+
+  <div class="content">
+
+    <div style="font-size:65px">💙</div>
+
+    <h1 style="color:white">
+      Once Again, Happy Birthday!
+    </h1>
+
+    <p style="color:white">
+
+      Thank you for being you.<br>
+
+      Keep shining, keep smiling,
+      and keep being amazing.
+
+      <br><br>
+
+      Seventeen looks heandsome on you! 💙
+
+      <br><br>
+
+      With lots of love,
+
+      <br>
+
+      Someone who wishes you the best ♡
+
+    </p>
+
+    <br>
+
+    <button
+      style="background:white;color:#398fca"
+      onclick="goToPage(1)">
+
+      ↻ Back to First Page
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// FUNGSI PINDAH HALAMAN
+
+function goToPage(number) {
+
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+  });
+
+  document.getElementById('page' + number)
+    .classList.add('active');
+
+}
+
+
+// FUNGSI SECTION HALAMAN 2
+
+function showSection(number) {
+
+  document.getElementById('section1').style.display =
+    number === 1 ? 'block' : 'none';
+
+  document.getElementById('section2').style.display =
+    number === 2 ? 'block' : 'none';
+
+}
+
+
+// ANIMASI LOVE TERBANG
+
+function createHearts(container, symbol, total) {
+
+  const area = document.getElementById(container);
+
+  for (let i = 0; i < total; i++) {
+
+    const heart = document.createElement('div');
+
+    heart.className =
+      container === 'whiteHearts'
+        ? 'white-heart'
+        : 'red-heart';
+
+    heart.innerHTML = symbol;
+
+    heart.style.left = Math.random() * 100 + '%';
+
+    heart.style.animationDuration =
+      (4 + Math.random() * 6) + 's';
+
+    heart.style.animationDelay =
+      Math.random() * 7 + 's';
+
+    heart.style.fontSize =
+      (15 + Math.random() * 25) + 'px';
+
+    area.appendChild(heart);
+
+  }
+
+}
+
+
+// LOVE PUTIH HALAMAN 1
+
+createHearts('whiteHearts', '♡', 30);
+
+
+// LOVE BIRU HALAMAN 4
+
+createHearts('redHearts', '💙', 25);
+
+
+// ANIMASI KUE ULANG TAHUN TERBANG
+
+function createFlyingCakes() {
+
+  const area = document.getElementById('flyingCakes');
+
+  const cakes = [
+    '🎂', '🧁', '🍰', '🎂',
+    '🧁', '🍰', '🎂', '🧁'
+  ];
+
+  cakes.forEach((symbol) => {
+
+    const cake = document.createElement('div');
+
+    cake.className = 'flying-cake';
+
+    cake.textContent = symbol;
+
+    cake.style.setProperty(
+      '--cake-left',
+      (5 + Math.random() * 90) + '%'
+    );
+
+    cake.style.setProperty(
+      '--cake-size',
+      (25 + Math.random() * 25) + 'px'
+    );
+
+    cake.style.setProperty(
+      '--cake-duration',
+      (9 + Math.random() * 8) + 's'
+    );
+
+    cake.style.setProperty(
+      '--cake-delay',
+      (-Math.random() * 15) + 's'
+    );
+
+    area.appendChild(cake);
+
+  });
+
+}
+
+createFlyingCakes();
+
+</script>
+
+</body>
+</html>
